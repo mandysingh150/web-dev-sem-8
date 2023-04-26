@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .bg-primary {
+            background-color: #007bff !important;
+        }
+
+        .navbar {
+            margin-bottom: 30px;
+        }
+
+        .about {
+            padding: 60px 0;
+        }
+
+        .skills {
+            padding: 60px 0;
+        }
+
+        .about {
+            padding: 60px 0;
+        }
+
+        .skills {
+            padding: 60px 0;
+        }
+
+        .row {
+            margin-bottom: 5px;
+        }
+        .center-button {
+            align-tracks: center;
+        }
+    </style>
+    <title>Student Detail Form</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Class App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="text-center">Student Detail Form</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="formSection" class="formSection">
+            <form name="myForm" action="/myaction.php" enctype="multipart/form-data" onsubmit="return validateForm()"
+                method="post">
+                <div class="container">
+                    <div class="row">
+                        <label class="col-4" for="fName">First Name</label>
+                        <input class="col-4" type="text" id="fName" name="fName" />
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="lName">Last Name</label>
+                        <input class="col-4" type="text" id="lName" name="lName" />
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="rNo">Roll Number</label>
+                        <input class="col-4" type="text" id="rNo" name="rNo" />
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="mNo">Mobile Number</label>
+                        <input class="col-4" type="text" id="mNo" name="mNo" />
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="eMail">Email</label>
+                        <input class="col-4" type="text" id="eMail" name="eMail" />
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="branch">Branch</label>
+                        <select name="branch" class="form-select col-4" aria-label="Default select example">
+                            <option value="" selected>Choose...</option>
+                            <option value="COE">COE</option>
+                            <option value="IT">IT</option>
+                            <option value="ECE">ECE</option>
+                            <option value="ME">ME</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="gender">Gender</label>
+                        <div class="form-check col-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                                value="MALE" />
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check col-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                value="FEMALE" />
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Female
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="birthday">DOB</label><br />
+                        <input class="col-4" type="date" id="birthday" name="birthday" /><br />
+                    </div>
+                    <div class="row">
+                        <label for="fileInput" class="col-4">Photo</label>
+                        <input class="form-control col-4" type="file" id="fileInput" name="fileInput" />
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="description">Description</label>
+                        <textarea class="col-4" name="description" id="description"></textarea>
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="vehicle">Vehicle</label>
+                        <div class="col-2">
+                            <input type="checkbox" id="twoWheeler" name="twoWheeler" value="2" />
+                            <label for="twoWheeler">2 wheeler</label>
+                        </div>
+                        <div class="col-2">
+                            <input type="checkbox" id="fourWheeler" name="fourWheeler" value="4" />
+                            <label for="fourWheeler">4 wheeler</label>
+                        </div>
+                    </div>
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+<script src="exp3.js"></script>
+
+</html>

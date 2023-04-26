@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .about {
+            padding: 60px 0;
+        }
+
+        .row {
+            margin-bottom: 5px;
+        }
+    </style>
+    <title>Student Detail Form</title>
+</head>
+
+<body>
+    <main>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="text-center">Student Detail Form</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="formSection" class="formSection">
+            <form name="myForm" action="/myaction.php" enctype="multipart/form-data" onsubmit="return validateForm()"
+                method="post">
+                <div class="container">
+                    <div class="row">
+                        <label class="col-4" for="fName">First Name</label>
+                        <input class="col-4" type="text" id="fName" name="fName" />
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="lName">Last Name</label>
+                        <input class="col-4" type="text" id="lName" name="lName" />
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="rNo">Roll Number</label>
+                        <input class="col-4" type="text" id="rNo" name="rNo" />
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="mNo">Mobile Number</label>
+                        <input class="col-4" type="text" id="mNo" name="mNo" />
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="eMail">Email</label>
+                        <input class="col-4" type="text" id="eMail" name="eMail" />
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="branch">Branch</label>
+                        <select name="branch" class="form-select col-4" aria-label="Default select example">
+                            <option value="" selected>Choose...</option>
+                            <option value="COE">COE</option>
+                            <option value="IT">IT</option>
+                            <option value="ECE">ECE</option>
+                            <option value="ME">ME</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="gender">Gender</label>
+                        <div class="form-check col-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                                value="MALE" />
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check col-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                value="FEMALE" />
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Female
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-4" for="birthday">DOB</label><br />
+                        <input class="col-4" type="date" id="birthday" name="birthday" /><br /><br />
+                    </div>
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+<script src="exp1.js"></script>
+
+</html>
