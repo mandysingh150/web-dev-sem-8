@@ -1,4 +1,0 @@
-express
-mongodb
-sqlite3
-cors
